@@ -38,7 +38,7 @@ class CoderadarAPI {
         return $this->makeRequest('GET', '/');
     }
 
-    public function search($query, $group = null, $aggregations = false, $page = 1, $size = 100) {
+    public function search($query, $group = null, $aggregations = false, $page = 1, $size = 50) {
         $params = compact('query', 'group', 'aggregations', 'page', 'size');
         return $this->makeRequest('GET', '/search', $params);
     }
